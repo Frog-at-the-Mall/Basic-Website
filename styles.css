@@ -1,0 +1,92 @@
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  /*  */
+  box-sizing: border-box;
+  font-size: large;
+}
+
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: blanchedalmond;
+  overflow: hidden;
+}
+
+/* Navbar container */
+nav {
+  background: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Always horizontal menu by default */
+.menu {
+  list-style: none;
+  display: flex; /* Default: Horizontal */
+  gap: 15px;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+}
+
+/* Hamburger button (Hidden by default) */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Mobile styles: Hide normal nav and show hamburger */
+@media (max-width: 600px) {
+  .menu {
+    display: none; /* Hide menu */
+    flex-direction: column;
+    align-items: center;
+    background: #333;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  /* Show hamburger icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Show menu when JS adds this class */
+  .menu.open {
+    display: flex;
+  }
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+canvas {
+  /* position: fixed; */
+
+  width: 100vw;
+  height: 100vh;
+}
