@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar</title>
+    <title>Responsive Navbar with Shaders</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav>
-      <!-- Hamburger Button (Hidden on Large Screens) -->
-      <div class="menu-icon" id="menu-button">☰</div>
+    <!-- Shader canvas behind the navigation -->
+    <!-- <div id="shader-nav"></div> -->
 
-      <!-- Navigation Menu (Visible on Large Screens) -->
+    <nav>
+      <div class="menu-icon" id="menu-button">☰</div>
       <ul class="menu" id="menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
@@ -21,10 +21,13 @@
     </nav>
 
     <main>
-      <!-- <p>Welcome to the responsive navigation example.</p> -->
-      <!-- <button id="myButton">Click Me</button> -->
+      <div id="shader-glitch" style="width: 300px; height: 200px"></div>
+      <div id="shader-squares" style="width: 300px; height: 200px"></div>
+      <div id="shader-abyss" style="width: 300px; height: 200px"></div>
+      <div id="shader-shapes" style="width: 300px; height: 200px"></div>
+      <div id="shader-lines" style="width: 300px; height: 200px"></div>
     </main>
-    <canvas id="shaderCanvas"></canvas>
+
     <script src="script.js"></script>
   </body>
 </html>
